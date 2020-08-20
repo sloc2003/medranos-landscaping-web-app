@@ -5,6 +5,8 @@
     "vetur.format.defaultFormatterOptions": {
         "js-beautify-html": {
             "wrap_attributes": "force-expand-multiline",
+            "preserve_newlines": true,
+            "end_with_newline": true
         },
         "prettier": {
             "singleQuote": true,
