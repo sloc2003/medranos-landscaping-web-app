@@ -7,47 +7,82 @@
     <div class="d-flex align-center">
       <v-img
         alt="Medrano's Landscaping, LLC Logo"
-        class="shrink mr-2"
+        class="mr-2"
         contain
         :src="require('../assets/medranoLogo.jpg')"
         transition="scale-transition"
         width="80"
       />
-      <div><span class="text-h4">Medrano's Landscaping, LLC</span></div>
+      <div class="text-h6 text-md-h5">Medrano's Landscaping, LLC</div>
     </div>
     <v-spacer />
-    <v-btn
-      href=""
-      target="_blank"
-      text
+    <v-tooltip
+      bottom
+      :disabled="$vuetify.breakpoint.lgAndUp"
+    ><template v-slot:activator="{on}">
+        <v-btn
+          href=""
+          target="_blank"
+          text
+          v-on="on"
+        >
+          <span class="mr-2 hidden-md-and-down">Home</span>
+          <v-icon>mdi-home</v-icon>
+        </v-btn>
+      </template>
+      <span>Home</span>
+    </v-tooltip>
+    <v-tooltip
+      bottom
+      :disabled="$vuetify.breakpoint.lgAndUp"
     >
-      <span class="mr-2">Home</span>
-      <v-icon>mdi-home</v-icon>
-    </v-btn>
-    <v-btn
-      href=""
-      target="_blank"
-      text
+      <template v-slot:activator="{on}">
+        <v-btn
+          href=""
+          target="_blank"
+          text
+          v-on="on"
+        >
+          <span class="mr-2 hidden-md-and-down">Latest Projects</span>
+          <v-icon>mdi-post</v-icon>
+        </v-btn>
+      </template><span>Latest Projects</span>
+    </v-tooltip>
+    <v-tooltip
+      bottom
+      :disabled="$vuetify.breakpoint.lgAndUp"
     >
-      <span class="mr-2">Latest Projects</span>
-      <v-icon>mdi-post</v-icon>
-    </v-btn>
-    <v-btn
-      href=""
-      target="_blank"
-      text
+      <template v-slot:activator="{on}">
+        <v-btn
+          href=""
+          target="_blank"
+          text
+          v-on="on"
+        >
+          <span class="mr-2 hidden-md-and-down">Testmonials</span>
+          <v-icon>mdi-account-voice</v-icon>
+        </v-btn>
+      </template>
+      <span>Testmonials</span>
+    </v-tooltip>
+    <v-tooltip
+      bottom
+      :disabled="$vuetify.breakpoint.lgAndUp"
     >
-      <span class="mr-2">Testmonials</span>
-      <v-icon>mdi-account-voice</v-icon>
-    </v-btn>
-    <v-btn
-      href=""
-      target="_blank"
-      text
-    >
-      <span class="mr-2">About Us</span>
-      <v-icon>mdi-information-variant</v-icon>
-    </v-btn>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          href=""
+          target="_blank"
+          text
+          v-bind="attrs"
+          v-on="on"
+        >
+          <span class="mr-2 hidden-md-and-down">About Us</span>
+          <v-icon>mdi-information-variant</v-icon>
+        </v-btn>
+      </template>
+      <span>ToolTip</span>
+    </v-tooltip>
   </v-app-bar>
 </template>
 
