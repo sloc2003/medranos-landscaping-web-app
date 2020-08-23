@@ -15,5 +15,5 @@
         }
     },
     "vetur.format.defaultFormatter.html": "js-beautify-html",
-    "vetur.format.scriptInitialIndent": true,
+    "vetur.format.scriptInitialIndent": true
 }
