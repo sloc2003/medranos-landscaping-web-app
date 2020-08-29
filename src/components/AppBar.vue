@@ -4,10 +4,10 @@
     color="primary"
     dark
   >
-    <div class="d-flex align-center">
+    <div class="d-flex align-center ">
       <v-img
         alt="Medrano's Landscaping, LLC Logo"
-        class="mr-2"
+        class="mr-2 hidden-md-and-down"
         contain
         :src="require('../assets/medranoLogo.jpg')"
         transition="scale-transition"
